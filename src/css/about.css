@@ -1,0 +1,43 @@
+.main-area {
+    background-color: var(--firstSection-background-color);
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+.title {
+    text-transform: capitalize;
+    font-size: 30px;
+    color: white;
+}
+
+.desc,
+.mission {
+    margin-top: -40px;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: lighter;
+    padding: 20px;
+}
+
+#ceo {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+h3 {
+    padding: 20px;
+}
+
+.roles {
+    margin-top: -30px;
+}
