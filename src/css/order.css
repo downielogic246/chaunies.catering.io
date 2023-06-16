@@ -1,15 +1,4 @@
-.home {
-    position: absolute;
-    right: 2%;
-    top: 5%;
-    background-color: none;
-    color: white;
-    border: solid 2px white;
-    font-size: 25px;
-    padding: 10px;
-    border-radius: 10px;
-    text-decoration: none;
-}
+
 
 .form-container {
     display: flex;
@@ -44,7 +33,7 @@ legend {
     letter-spacing: 3px;
 }
 
-#deliveryMode {
+#deliveryMode,#pickup-date {
     font-size: 20px;
     padding: 25px;
 }
@@ -55,13 +44,7 @@ select {
     font-size: 15px;
     font-weight: bold;
     border-radius: 10px;
-    background-image: var(--theme-background-image);
-}
-
-:root {
-    --theme-background-image: linear-gradient(to right,
-            rgb(255, 190, 69),
-            red);
+    background-image: var(--themeColor-background-image);
 }
 
 #address {
@@ -84,24 +67,27 @@ select {
     align-items: flex-start;
     justify-content: center;
     text-transform: capitalize;
-    background-color: rgba(46, 45, 45, 0.502);
+    background-color: var(--firstSection-background-color);
 }
 
 #check {
+    cursor: pointer;
     font-size: 20px;
     font-weight: bold;
     color: black;
     margin: 15px;
     border: none;
-    background-image: var(--theme-background-image);
+    background-image: var(--themeColor-background-image);
 }
 
 .items-container {
     border: 1px solid white;
     width: 75vw;
     display: grid;
-    grid-template-areas: "auto auto";
-    background-image: url(Photos/ingredients.jpeg);
+    grid-template-areas: "special special"
+    "auto auto";
+    grid-template-rows: 10% 90%;
+    background-image: url(Photos/background_order.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -121,22 +107,45 @@ select {
 }
 
 .price {
-    font-size: 1.5em;
+    font-size: 4rem;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-.desc {
+/* .desc {
     letter-spacing: 1px;
+    width: 100%;
+    margin-top: 20px;
     font-family: "Noto";
-}
+} */
 
 [id*="quantity-"] {
-    width: 100px;
+    width: 75px;
 }
 
 .itemName {
     margin: 10px;
     text-transform: capitalize;
     font-family: "Copperplate Gothic Light";
+}
+.special-order{
+    width: 100%;
+    grid-area: special;
+}
+
+.special-order article{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.special-order article::before{
+    content: "*";
+}
+
+.special-order article::before, .special-order {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
 }

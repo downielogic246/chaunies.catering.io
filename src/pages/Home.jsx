@@ -1,7 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
+import TopBtn from "../components/TopBtn";
+import Footer from "../components/Footer";
+import Cheese from "../components/Designs/Cheese";
 
 const Home = () => {
   const welcome = useRef();
+  const mainArea = useRef();
 
   const [show, setShow] = useState(() => {
     const value = localStorage.getItem("show");
@@ -49,21 +53,46 @@ const Home = () => {
           </a>
         </div>
       </div>
+      <Cheese />
+      <TopBtn />
       {/* <!-- Main Content --> */}
-      <section className="main-area">
+      <section className="main-area" ref={mainArea}>
         {/* <!-- Greeting Section --> */}
         <div className="greeting-container">
-          <h1>deliciously smooth</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, iure,
-            voluptates non sint nemo dolorum quis impedit laudantium asperiores
-            sequi distinctio quos voluptas iusto voluptate, nisi deleniti.
-            Architecto placeat est, perspiciatis, ullam repellat, nostrum beatae
-            fugit nobis tenetur itaque ad!
-          </p>
+          <div className="greeting-heading">
+            <h1>chaunie's</h1>
+            <h2>deliciously smooth</h2>
+          </div>
+          <div
+            className="greeting-image"
+            style={{ backgroundImage: "url(../../Photos/ingredients.jpeg)" }}
+          ></div>
         </div>
       </section>
-
+      <section className="other-area">
+        <div className="qualities-container">
+          <div className="quality">
+            <h3 className="third-heading">Delivery</h3>
+            <i className="fa-solid fa-truck"></i>
+            <article>Fast delivery</article>
+          </div>
+          <div className="quality">
+            <h3 className="third-heading">Taste</h3>
+            <i className="fa-regular fa-face-grin-tongue-squint"></i>
+            <article>Quality taste</article>
+          </div>
+          <div className="quality">
+            <h3 className="third-heading">Unique</h3>
+            <i className="fa-solid fa-fingerprint"></i>
+            <article> Chaunie's touch</article>
+          </div>
+        </div>
+        <article className="chaunies-desc">
+          At Chaunie's our customers come first. We look out for you and your
+          interest. Our customers are always right!
+        </article>
+      </section>
+      <Footer></Footer>
       {/* <!-- Social Links --> */}
       <div className="socials-container">
         <ul className="socials">

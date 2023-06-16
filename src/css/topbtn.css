@@ -11,12 +11,12 @@
     text-decoration: none;
     justify-content: center;
     align-items: center;
-    bottom: 75px;
-    right: 100px;
+    bottom: 17%;
+    right: 10%;
     background-color: rgb(255, 190, 69);
     color: white;
     border-radius: 10px;
-    transition-property: width, height, bottom, right, font-size;
+    transition-property: width, height, font-size;
     transition-duration: 0.25s;
     transition-timing-function: ease-in-out;
 }
@@ -24,7 +24,5 @@
 .toTop:hover {
     width: 70px;
     height: 60px;
-    bottom: 72px;
-    right: 95px;
     font-size: 30px;
 }

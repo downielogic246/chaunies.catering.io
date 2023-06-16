@@ -1,5 +1,7 @@
 import React, { useRef, useState } from "react";
 import TopBtn from "../components/TopBtn";
+import Cheese from "../components/Designs/Cheese";
+import Footer from "../components/Footer";
 
 const items = [
   {
@@ -14,7 +16,7 @@ const items = [
     photo: "",
     name: "16oz Cheesepaste",
     price: 18.5,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolorem similique eaque, aut vitae, temporibus sapiente maiores eum eveniet autem nemo illo, quis ab maxime!",
+    // desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolorem similique eaque, aut vitae, temporibus sapiente maiores eum eveniet autem nemo illo, quis ab maxime!",
   },
 ];
 
@@ -32,17 +34,14 @@ const Order = () => {
 
   return (
     <>
+      <Cheese />
       <TopBtn />
       {/* <!-- Main Area --> */}
       <section className="main-area">
         <div className="order-container">
-          <a title="Home" href="index.html" className="home">
-            back to home
-          </a>
-
           <div className="form-container">
             {/* <!-- Form --> */}
-            <form action="https://formspree.io/f/meqwkjrb" method="POST">
+            <form action="https://formspree.io/f/mnqyevyz" method="POST">
               {/* <!-- Customer Information Section --> */}
               <fieldset id="customerInfo">
                 <legend title="Customer Information">
@@ -86,7 +85,13 @@ const Order = () => {
                     <option value="Self Pick-Up">Self Pick-Up</option>
                     <option value="Delivery">Delivery</option>
                   </select>
+                  <br />
 
+                  <label id="pickup-date" required>
+                    Pick Up/Delivery Date
+                  </label>
+                  <br />
+                  <input type="datetime-local" name="Due Date" />
                   <br />
                   <input
                     type="text"
@@ -104,6 +109,11 @@ const Order = () => {
               <fieldset id="orderInfo">
                 <legend title="Order Information">Order Information</legend>
                 <div className="items-container">
+                  <div className="special-order">
+                    <article>
+                      Special order can be made via email or phonecall
+                    </article>
+                  </div>
                   {items.map((item) => {
                     return (
                       <div className="item" key={item.id}>
@@ -127,7 +137,7 @@ const Order = () => {
                             max="2"
                             data-name={item.name}
                           />
-                          <article className="desc">{item.desc}</article>
+                          {/* <article className="desc">{item.desc}</article> */}
                         </div>
                       </div>
                     );
@@ -142,6 +152,7 @@ const Order = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

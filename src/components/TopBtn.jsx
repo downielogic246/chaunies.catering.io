@@ -6,7 +6,7 @@ const TopBtn = () => {
   window.addEventListener("scroll", () => {
     let screenHeight = window.scrollY;
 
-    setShowBtn(screenHeight >= 300 ? "flex" : "none");
+    setShowBtn(screenHeight >= 250 ? "flex" : "none");
   });
 
   return (

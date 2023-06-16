@@ -1,10 +1,12 @@
 import React from "react";
-import "../css/services.css";
 import TopBtn from "../components/TopBtn";
+import Cheese from "../components/Designs/Cheese";
+import Footer from "../components/Footer";
 
 const Services = () => {
   return (
     <>
+      <Cheese />
       <TopBtn />
       {/* <!-- Main Area --> */}
       <div className="main-area">
@@ -16,20 +18,17 @@ const Services = () => {
             <ul>
               <li>
                 <a href="#wedding">
-                  <i className="fa-solid fa-arrow-right"></i>
-                  Weddings
+                  <i className="fa-solid fa-arrow-right"></i> Weddings
                 </a>
               </li>
               <li>
                 <a href="#parties">
-                  <i className="fa-solid fa-arrow-right"></i>
-                  Parties
+                  <i className="fa-solid fa-arrow-right"></i> Parties
                 </a>
               </li>
               <li>
                 <a href="#corporate_events">
-                  <i className="fa-solid fa-arrow-right"></i>
-                  Corporate Events
+                  <i className="fa-solid fa-arrow-right"></i> Corporate Events
                 </a>
               </li>
             </ul>
@@ -46,21 +45,14 @@ const Services = () => {
           </div>
           <div className="desc">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-              autem laudantium voluptatum itaque sit debitis, nam, officiis
-              maiores blanditiis quidem amet ipsa nobis quisquam ullam obcaecati
-              dolorum quo ducimus vel!
+              Chaunie's caters to weddings, where cheese guaranteed to say "I
+              DO!"
             </p>
           </div>
         </div>
         <div id="parties" className="service-2">
           <div className="desc">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-              eveniet, expedita reiciendis deleniti ipsa beatae maxime
-              voluptates reprehenderit earum quo eius repellat non quasi
-              corrupti. Enim earum dicta incidunt assumenda.
-            </p>
+            <p>We also cater to parties, making partying cheesy.</p>
           </div>
           <div
             className="title"
@@ -77,15 +69,11 @@ const Services = () => {
             <h1>Corporate Events</h1>
           </div>
           <div className="desc">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem ad laboriosam necessitatibus temporibus, excepturi
-              maiores itaque quae repellendus unde cupiditate eligendi culpa
-              blanditiis cum possimus officia ipsum nulla dignissimos! Deleniti.
-            </p>
+            <p>And even corporate events, just cheese and relax.</p>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
